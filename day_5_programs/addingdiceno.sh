@@ -10,4 +10,4 @@ then
 echo "Second dice number is: "$randomnumber2
 fi
 sum=$((randomnumber1+randomnumber2))
-echo "Sum of two dice number is = "$sum
+echo "   Sum of two dice number is =    "$sum
