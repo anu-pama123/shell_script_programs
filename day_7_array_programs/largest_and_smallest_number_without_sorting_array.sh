@@ -17,16 +17,13 @@ done
 echo "${number[*]}"
 max=${number[0]}
 second_max=${number[0]}
-for ((i = 0; i < 10; i++)); do
+for ((i = 1; i < 10; i++)); do
 if [ ${number[i]} -gt $max ]
 then
 second_max=$max
 max=${number[i]}
 fi
-#max=$((number[i] > max ? number[i] : max))
 done
-
-#echo $max
 echo 'second max '$second_max
 min=${number[0]}
 second_min=${number[0]}
@@ -36,7 +33,6 @@ then
 second_min=$min
 min=${number[i]}
 fi
-#min=$((number[i] < min ? number[i] : min))
 done
 echo 'second min '$second_min
 
