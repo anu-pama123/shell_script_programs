@@ -1,5 +1,5 @@
 read -p "Enter the number " n
-while [ $n -gt 2 ]
+while [ $n -ge 2 ]
 do
 for((i=2; i<=$n/2; i++))
 do

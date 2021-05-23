@@ -1,9 +1,9 @@
 read -p "Enter the limit " n
-echo "n th harmonic number is "
 ans=0
 for((i=1; i<=$n; i++))
 do
-x='expr 1 / $i'
-ans=$(( $ans + $x ))
+x=$(echo "scale=2; 1 / $i" | bc) 
+ans=$(echo "scale=2; $ans + $x" | bc)
 done
-echo $ans
+echo "n th harmonic number is "$ans
+

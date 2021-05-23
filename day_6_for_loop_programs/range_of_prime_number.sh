@@ -1,24 +1,20 @@
-read -p "Enter a Range of number (a to b) : " a b
-
-echo "Prime numbers in the given range are :"
-
-for ((i=$a;i<=$b;i++))
+read -p "Enter a Range of number (a to b) : " num1 num2
+for ((i=$num1;i<=$num2;i++))
 do
-max1=`echo | awk "{print sqrt($a)}"`
-max2=`printf %.0f "$max1"`
-maxCap=$max2
-check=0
-for (( j=2;j<=$maxCap;j++ ))
+flag=0
+for((j=2; j<=$i/2; j++))
 do
-if [ $(($i%$j)) -eq 0 ] 
+ans=$(( i%j ))
+if [ $ans -eq 0 ]
 then
-check=1;
-break;
+flag=1
+echo "$i is not a prime number"
+break
 fi
 done
-if [ $check -eq 0 ]
+if [ $flag -eq 0 ]
 then
-echo -n "$i "
+echo "$i is a prime number"
 fi
-done
+done 
 

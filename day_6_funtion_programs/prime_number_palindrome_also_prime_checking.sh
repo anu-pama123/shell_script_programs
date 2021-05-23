@@ -11,11 +11,6 @@ exit 0
 fi
 done
 echo "$n is a prime number"
-#exit 0
-#done 
-
-#echo "Enter the number"
-#read n
 number=$n
 reverse=0
 while [ $n -gt 0 ]
@@ -28,11 +23,7 @@ echo $reverse
 if [ $number -eq $reverse ]
 then
 echo "Number is palindrome"
-#exit 0
-#done 
-
 else
 echo "Number is not palindrome"
 fi
-
 done
